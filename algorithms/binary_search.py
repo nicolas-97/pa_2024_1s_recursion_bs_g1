@@ -9,30 +9,21 @@ def binary_search(arr: list, target: int, start=0, end=0):
     
     mitad_arreglo = (start + end) // 2
 
-    verificador=arr[promedioarr]
-
-    if verificador==target:
-        return 1
-    elif target>verificador:
-    
-        if verificador==target: 
-            return 1
-        else: 
-            binary_search ()
-    else: 
-        if  verificador==target: 
-            return 1
-        else: 
-            binary_search()
-
-    
-    return 1
+    if arr[mitad_arreglo] == target:
+        return mitad_arreglo
+    elif arr[mitad_arreglo] > target:
+        return binary_search(arr, target, start, mitad_arreglo-1)
+    elif arr[mitad_arreglo] < target:
+        return binary_search(arr, target, mitad_arreglo + 1, end)
+    else:
+        return -1
 
 '''
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
-def binary_search_matrix(matrix: list[list[int]], target: int):
-    return False
+def binary_search_matrix(matrix: list[list[int]], target: int, start=0, end=0):
+   
+
 
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
