@@ -17,6 +17,9 @@ def binary_search(arr: list, target: int):
                 low=mid+1
         
     return -1
+
+
+
  
 
 '''
