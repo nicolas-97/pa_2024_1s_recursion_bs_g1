@@ -1,5 +1,5 @@
 '''
-    Implementa una función recursiva para calcular el factorial de un número entero positivo
+    Implementa una función recursivsa para calcular el factorial de un número entero positivo
 '''
 def factorial(n):
     return n
