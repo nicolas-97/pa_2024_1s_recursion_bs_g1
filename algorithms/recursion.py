@@ -2,6 +2,9 @@
     Implementa una función recursiva para calcular el factorial de un número entero positivo
 '''
 def factorial(n):
+    if (caso==3):
+        return n
+
     return n
 
 '''
