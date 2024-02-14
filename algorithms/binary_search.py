@@ -8,7 +8,9 @@ def binary_search(arr: list, target: int, ini=0, fin=0):
         fin=len(arr)
 
     size = fin-ini
-    if size <=1:
+    if size==0:
+        return arr
+    elif size ==1:
         if arr[0]==target:
             return 0
         else:
