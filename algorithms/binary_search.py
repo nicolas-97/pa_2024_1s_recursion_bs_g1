@@ -67,9 +67,9 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
 def binary_search_tree(root: TreeNode, target: int):
     if target==root.val:
         return True
-    elif root.val<target:
+    elif root.val<target and root.right!=None:
         return binary_search_tree(root.right, target)
-    elif root.val>target:
+    elif root.val>target and root.left!=None:
         return binary_search_tree(root.left, target)
     else:
         return False
