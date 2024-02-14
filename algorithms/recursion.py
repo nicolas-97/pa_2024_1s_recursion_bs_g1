@@ -34,9 +34,7 @@ def sum_of_numbers(n):
     Implementa una función recursiva para calcular a^n (a elevado a la potencia n).
 '''
 def power(a, n):
-    if n==0:
-        return 0
-    elif n==1:
+    if n<=1:
         return a
     else:
         return a* power(a, n-1)
@@ -51,7 +49,7 @@ def max_in_list(lst):
     elif size==1:
         return lst[0]
     else:
-        if lst[0]<lst[1]:
+        if lst[0]>lst[1]:
             lst.pop(1)
             return max_in_list(lst)
         else:
