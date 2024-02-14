@@ -6,16 +6,21 @@ from models.tree_node import TreeNode
 def binary_search(arr: list, target: int):
     low=0
     high=len(arr)
-    while(low<=high):
-        mid=(low+high)//2
-        if(arr[mid]==target):
-            return mid
-        else:
-            if(target<arr[mid]):
-                high=mid-1
+    if(len(arr)!=0):
+        while(low<=high):
+            mid=(low+high)//2
+            
+            if(mid==len(arr)):
+                 return -1
+            
+            if(arr[mid]==target):
+                    return mid
             else:
-                low=mid+1
-        
+                    if(target<arr[mid]):
+                        high=mid-1
+                    else:
+                        low=mid+1
+            
     return -1
 
 

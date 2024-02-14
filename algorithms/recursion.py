@@ -69,4 +69,3 @@ def max_in_list(lst):
         mayor=max_in_list(lst)
     
     return mayor
-
