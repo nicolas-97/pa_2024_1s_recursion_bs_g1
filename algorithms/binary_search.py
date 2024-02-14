@@ -12,7 +12,7 @@ def binary_search(arr: list, target: int):
         elif arr[mid] > target:
             return binary_search(arr[:mid], target)
         else:
-            return 1
+            return -1
 
 '''
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
