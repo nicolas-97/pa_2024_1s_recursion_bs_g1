@@ -19,6 +19,6 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
 '''
 def binary_search_tree(root: TreeNode, target: int):
     return False
-
+ 
 list = [1,2,3,4,5,6,7,8,9,10]
 binary_search(list)
