@@ -18,14 +18,20 @@ def binary_search(arr: list, target: int):
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix: list[list[int]], target: int):
-    '''low = 0
+    low = 0
     rows = len(matrix) # Filas de la matriz
     cols = len(matrix[0]) #Columnas de la matriz
     high = cols * rows - 1
     
     while low <= high:
         mid = (low + high) // 2
-        '''
+        val =matrix[mid // cols][mid % cols]
+        if  val == target:
+            return True
+        elif val < target:
+            low = mid +1
+        else:
+            high = mid -1
     return False
 
 '''
