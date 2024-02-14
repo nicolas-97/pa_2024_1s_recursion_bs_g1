@@ -3,7 +3,29 @@ from models.tree_node import TreeNode
 '''
     Implementa una función de búsqueda binaria que encuentre un elemento en una lista ordenada de enteros y retorne su posicion si no lo encuntra que retorne -1
 '''
-def binary_search(arr: list, target: int):
+def binary_search(arr: list, target: int, start=0, end=0):
+    if start == 0 and end == 0:
+        end = len(arr)
+    
+    mitad_arreglo = (start + end) // 2
+
+    verificador=arr[promedioarr]
+
+    if verificador==target:
+        return 1
+    elif target>verificador:
+    
+        if verificador==target: 
+            return 1
+        else: 
+            binary_search ()
+    else: 
+        if  verificador==target: 
+            return 1
+        else: 
+            binary_search()
+
+    
     return 1
 
 '''

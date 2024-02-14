@@ -2,12 +2,22 @@
     Implementa una función recursiva para calcular el factorial de un número entero positivo
 '''
 def factorial(n):
-    return n
+    if n == 0:
+        return 1
+    else:
+        return n*factorial(n-1)
 
 '''
     Implementa una función recursiva para calcular el término n-ésimo de la secuencia de Fibonacci.
 '''
 def fibonacci(n):
+    
+    if n==0:
+        return n
+    elif n==1:
+        return 1
+        return fibonacci(n-1) + fibonacci(n-2)
+    
     return n
 
 '''
@@ -27,3 +37,5 @@ def power(a, n):
 '''
 def max_in_list(lst):
     return lst
+
+print(factorial(3))
