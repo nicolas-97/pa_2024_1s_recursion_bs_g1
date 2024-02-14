@@ -4,34 +4,24 @@ from models.tree_node import TreeNode
     Implementa una función de búsqueda binaria que encuentre un elemento en una lista ordenada de enteros y retorne su posicion si no lo encuntra que retorne -1
 '''
 def binary_search(arr: list, target: int):
-    low, high = 0, len(arr) - 1
-    if  high >= low:
-        mid = (high + low) // 2
-        if  arr[mid] == target:
-            return mid 
-        elif arr[mid] > target:
-            return binary_search(arr[:mid], target)
+    #Manejo de excepciones  en caso de que el arreglo esté vacío o si no se cumple la condición del Binary Search
+    izq = 0 #La parte izquierda del arreglo
+    der = len(arr)-1 #La parte derecha del arreglo 
+    while izq<= der:
+        mid =(izq + der)//2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            izq = mid +1
         else:
-            return -1
+            der = mid -1
+    return -1
+
 
 '''
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix: list[list[int]], target: int):
-    low = 0
-    rows = len(matrix) # Filas de la matriz
-    cols = len(matrix[0]) #Columnas de la matriz
-    high = cols * rows - 1
-    
-    while low <= high:
-        mid = (low + high) // 2
-        val =matrix[mid // cols][mid % cols]
-        if  val == target:
-            return True
-        elif val < target:
-            low = mid +1
-        else:
-            high = mid -1
     return False
 
 '''
