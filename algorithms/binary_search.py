@@ -63,4 +63,22 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_tree(root: TreeNode, target: int):
+    if(root==None):
+         return False
+    if(root.val==target):
+        return True
+   
+    if(root.left!=None):
+      
+        resultado=binary_search_tree(root.left,target)
+        if(resultado==True):
+            return resultado
+    if(root.right!=None):
+      
+        resultado2=binary_search_tree(root.right,target)
+        if (resultado2==True):
+            return resultado2
+
     return False
+
+
