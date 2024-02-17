@@ -50,3 +50,10 @@ def binary_search_tree(root: TreeNode, target: int):
         return binary_search_tree(root.left, target)
     
 
+
+
+
+
+
+
+
