@@ -7,11 +7,9 @@ import math
 def binary_search(arr: list, target: int):
     high = len(arr)
     low = 0
-    x = 0
-  
+    x = 0  
     for x in range(len(arr)-1):
         mid = (high+low)//2
-        print(mid)
         if arr[mid] == target:
             x += 1
             return mid
@@ -20,9 +18,7 @@ def binary_search(arr: list, target: int):
         elif arr[mid] < target:
             low = mid+1
     return -1
-        
-arr = [1, 3, 5, 7, 9, 11, 13]
-print(binary_search(arr, 8))
+
 '''
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
@@ -51,15 +47,11 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
                 lowlist = midlist +1
                 continue
 
+
+
+
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 """def binary_search_tree(root: TreeNode, target: int):
     return False"""
-
-matrix = [
-            [1, 3, 5],
-            [7, 9, 11],
-            [13, 15, 17]
-        ]
-print(binary_search_matrix(matrix, 17))
