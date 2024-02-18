@@ -52,7 +52,6 @@ def binary_search_tree(root: TreeNode, target: int):
             return False
         else:
             return binary_search_tree(root.left, target)
-        
     elif target > root.val:
         if root.right is None:
             return False
