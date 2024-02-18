@@ -51,5 +51,3 @@ def max_in_list(lst):
         del lst[1]
         max_in_list(lst)
     return lst[0]
-
-max_in_list([1, 2, 3, 4, 5])
