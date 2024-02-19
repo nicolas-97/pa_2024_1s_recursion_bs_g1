@@ -14,8 +14,9 @@ def binary_search(arr: list, target: int):
             superior = medio-1 #Se modifican extremos para volver a hacer la partición
         else:
             inferior = medio+1
-            medio = (inferior+superior)//2 #Se vuelve a calcular el punto medio
+        medio = (inferior+superior)//2 #Se vuelve a calcular el punto medio
     return -1 #Retornar en caso de no encontrar target
+
 
 '''
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
@@ -39,5 +40,3 @@ def binary_search_tree(root: TreeNode, target: int):
         return binary_search_tree(root.left, target)
     else:
         return binary_search_tree(root.right, target)
-
-
