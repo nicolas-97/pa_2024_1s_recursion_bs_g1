@@ -1,9 +1,4 @@
-#No funcionaba models
-class TreeNode:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
+from models.tree_node import TreeNode
 
 '''
     Implementa una función de búsqueda binaria que encuentre un elemento en una lista ordenada de enteros y retorne su posicion si no lo encuntra que retorne -1
@@ -38,30 +33,11 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
 def binary_search_tree(root: TreeNode, target: int):
     if root == None: #Caso base
         return False 
-    elif root.val == target: #Verificar si el primer valor es igual a target
+    elif root.val == target: #Verificar si el valor actual es igual a target
         return True
+    elif root.val > target: #Los arboles tiene a la derecha mayores e izquierda menores
+        return binary_search_tree(root.left, target)
     else:
-        binary_search_tree(root.right, target)
-        binary_search_tree(root.left, target)
-    return False
-
-        # Construir un árbol de búsqueda binaria para probar
-        #        10
-        #       /  \
-        #      5    15
-        #     / \   / \
-        #    3   7 12 17
-root = TreeNode(10)
-root.left = TreeNode(5)
-root.right = TreeNode(15)
-root.left.left = TreeNode(3)
-root.left.right = TreeNode(7)
-root.right.left = TreeNode(12)
-root.right.right = TreeNode(17)
-
-print(binary_search_tree(root, 5))
-print(binary_search_tree(root,15))
-print(binary_search_tree(root,3))
-print(binary_search_tree(root,17))
+        return binary_search_tree(root.right, target)
 
 
