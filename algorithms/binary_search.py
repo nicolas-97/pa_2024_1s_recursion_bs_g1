@@ -39,6 +39,7 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
             if matrix[i][j]== target:
                 return True
         fila +=1
+        
     return False
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
