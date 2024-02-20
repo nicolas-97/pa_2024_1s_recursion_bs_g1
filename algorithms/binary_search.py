@@ -1,4 +1,4 @@
-from models.tree_node import TreeNode
+#from models.tree_node import TreeNode
 
 class TreeNode:
     def __init__(self, val):
@@ -36,4 +36,3 @@ def binary_search_tree(root: TreeNode, target: int) -> bool:
         return binary_search_tree(root.right, target)
     else:
         return binary_search_tree(root.left, target)
-
