@@ -29,13 +29,13 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
 
     fila_actual = 0
     columna_actual = columnas-1
-    while fila_actual <= filas-1 and columna_actual >=0:
+    while fila_actual < filas-1 and columna_actual >=0:
         if  matrix[fila_actual][columna_actual]==target:
             return True
-        elif matrix[fila_actual][columna_actual] > target:
-            fila_actual +=1
+        elif matrix[fila_actual][columna_actual] < target:
+            fila_actual += 1
         else:
-            columna_actual -=1
+            columna_actual -= 1
     return False
 
 '''
