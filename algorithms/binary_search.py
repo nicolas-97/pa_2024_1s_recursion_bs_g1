@@ -28,8 +28,8 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
     columnas = len(matrix[0])
 
     fila_actual = 0
-    columna_actual = columnas-1
-    while fila_actual < filas-1 and columna_actual >=0:
+    columna_actual = columnas - 1
+    while fila_actual < filas and columna_actual >=0:
         if  matrix[fila_actual][columna_actual]==target:
             return True
         elif matrix[fila_actual][columna_actual] < target:
