@@ -29,8 +29,9 @@ def binary_search_matrix(matrix: list[list[int]], target: int):
     inicio, final = 0, filas*columnas - 1
 
     mitad= inicio-final//2
+        
 
-    
+
 
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
