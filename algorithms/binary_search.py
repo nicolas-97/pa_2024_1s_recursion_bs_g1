@@ -25,9 +25,13 @@ def binary_search(arr: list, target: int):
     enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix, target):
+
     # Inicializar índices para recorrer la matriz
     fila_actual = 0
     col_actual = len(matrix[0]) - 1  # Empezar desde la última columna
+
+    if len(matrix)<1:
+        return False
 
     while fila_actual < len(matrix) and col_actual >= 0:
         # Elemento actual en la matriz
