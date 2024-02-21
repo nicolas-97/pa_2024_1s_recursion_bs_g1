@@ -26,25 +26,25 @@ def binary_search(arr: list, target: int):
 '''
 def binary_search_matrix(matrix, target):
 
-    # Inicializar índices para recorrer la matriz
-    fila_actual = 0
-    col_actual = len(matrix[0]) - 1  # Empezar desde la última columna
+    
 
-    if len(matrix)<1:
-        return False
+    if len(matrix)>0:
+        # Inicializar índices para recorrer la matriz
+        fila_actual = 0
+        col_actual = len(matrix[0]) - 1  # Empezar desde la última columna
 
-    while fila_actual < len(matrix) and col_actual >= 0:
-        # Elemento actual en la matriz
-        elemento_actual = matrix[fila_actual][col_actual]
+        while fila_actual < len(matrix) and col_actual >= 0:
+            # Elemento actual en la matriz
+            elemento_actual = matrix[fila_actual][col_actual]
 
-        if elemento_actual == target:
-            return True
-        elif elemento_actual > target:
-            # Si el elemento actual es mayor, movemos a la fila anterior
-            col_actual -= 1
-        else:
-            # Si el elemento actual es menor, movemos a la siguiente fila
-            fila_actual += 1
+            if elemento_actual == target:
+                return True
+            elif elemento_actual > target:
+                # Si el elemento actual es mayor, movemos a la fila anterior
+                col_actual -= 1
+            else:
+                # Si el elemento actual es menor, movemos a la siguiente fila
+                fila_actual += 1
 
     # Si no se encuentra el elemento en la matriz
     return False
