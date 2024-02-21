@@ -1,62 +1,67 @@
 from models.tree_node import TreeNode
-
 '''
     Implementa una función de búsqueda binaria que encuentre un elemento en una lista ordenada de enteros y retorne su posicion si no lo encuntra que retorne -1
 '''
-def binary_search(arr: list, target: int):
-    return 1
-    if not arr:
-        return -1
 
-    Inicio =0
-    Final =len(arr)-1
-    while Inicio<=Final:
-        Mitad=(Inicio+Final)//2
-        if arr[Mitad] ==target:
-            return Mitad
-        elif arr[Mitad]< target:
-            Inicio = Mitad +1
-        else :
-            Final =Mitad-1
-    return -1
-   
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        mid_value = arr[mid]
+
+        if mid_value == target:
+            return mid  
+        elif mid_value < target:
+            low = mid + 1  
+        else:
+            high = mid - 1 
+
+    return -1  
+
 '''
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix: list[list[int]], target: int):
     return False
-    Filas =len(matrix)
-    if Filas ==0:
+def binary_search_matrix(matrix, target):
+    if not matrix or not matrix[0]:
         return False
-    Columna=len(matrix[0])
-    if Columna ==0:
-        return False
-    for Fila in matrix :
-        left,right =0,Columna-1
-        while left <=right:
-            Mitad =(left+right)//2
-            if Fila[Mitad] == target:
-                return True
-            elif Fila[Mitad] <target:
-                left= Mitad+1
-            elif Fila[Mitad] > target:
-                right =Mitad -1
-            else :
-                return False
 
+    rows, cols = len(matrix), len(matrix[0])
+    row, col = 0, cols - 1  
+
+    while row < rows and col >= 0:
+        current_value = matrix[row][col]
+
+        if current_value == target:
+            return True  
+        elif current_value < target:
+            row += 1 
+        else:
+            col -= 1  
+    return False 
 
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_tree(root: TreeNode, target: int):
+    return False
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-    if root is None:
-        return False
+def binary_search_tree(root: TreeNode, target: int) -> bool:
+    if not root:
+        return False  
 
-    if root.val == target:
-        return True
-    elif root.val < target:
-        return binary_search_tree(root.right, target)
-    elif root.val > target:
-        return binary_search_tree(root.left, target)
+    if root.value == target:
+        return True  
+
+    if target < root.value:
+        return binary_search_tree(root.left, target)  
+    else:
+        return binary_search_tree(root.right, target) 
 
