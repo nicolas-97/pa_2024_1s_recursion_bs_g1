@@ -27,13 +27,17 @@ def binary_search(arr: list, target: int, start=0, end=0):
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix: list[list[int]], target: int):
-    if len(matrix)==0:
+
+    longitud_matriz =len(matrix)
+    fila =0
+    if longitud_matriz == 0:
         return False
-    concatenado = np.concatenate(matrix)
-    concatenado.sort()
-    for num in concatenado:
-        if num == target:
-            return True
+    for i in range(0, longitud_matriz):
+        for j in range(0,len(matrix[fila])):
+            if matrix[i][j]== target:
+                return True
+        fila +=1
+        
     return False
 
 '''
