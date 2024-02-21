@@ -24,21 +24,22 @@ def binary_search(arr: list, target: int):
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix: list[list[int]], target: int):
-    if not matrix or not matrix[0]:
+   if not matrix or not matrix[0]:
         return False
     
-    rows, cols = len(matrix), len(matrix[0])
-    row, col = 0, cols - 1
+   filas, columnas = len(matrix), len(matrix[0])
+   fila, columna = 0, columnas - 1
 
-    while row < rows and col >= 0:
-        if matrix[row][col] == target:
+   while fila < filas and columna >= 0:
+        current = matrix[fila][columna]
+        if current == target:
             return True
-        elif matrix[row][col] < target:
-            row += 1
+        elif current < target:
+            fila += 1
         else:
-            col -= 1
+            columna -= 1
     
-    return False
+   return False
 
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
