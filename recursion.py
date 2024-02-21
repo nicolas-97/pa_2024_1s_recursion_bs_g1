@@ -13,7 +13,7 @@ def factorial(n):
     Implementa una función recursiva para calcular el término n-ésimo de la secuencia de Fibonacci.
 '''
 def fibonacci(n):
-     return n
+    return n
     if n <= 1:
         return n
     else:
