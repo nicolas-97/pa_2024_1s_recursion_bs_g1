@@ -43,20 +43,15 @@ def binary_search_matrix(matrix, target):
 '''
     Implementa una función de búsqueda binaria en un árbol binario de búsqueda  y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
-class TreeNode:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
 
-def binary_search_tree(root: TreeNode, target: int) -> bool:
-    if not root:
+def binary_search_tree(root: TreeNode, target: int):
+    if root is None:
         return False  
 
-    if root.value == target:
+    elif root.val == target:
         return True  
 
-    if target < root.value:
+    elif target < root.val:
         return binary_search_tree(root.left, target)  
-    else:
+    elif target > root.val:
         return binary_search_tree(root.right, target) 
