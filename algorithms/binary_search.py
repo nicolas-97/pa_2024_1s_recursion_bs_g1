@@ -1,5 +1,4 @@
 from models.tree_node import TreeNode
-import numpy as np
 '''
     Implementa una función de búsqueda binaria que encuentre un elemento en una lista ordenada de enteros y retorne su posicion si no lo encuntra que retorne -1
 '''
