@@ -1,4 +1,4 @@
-from models.tree_node import TreeNode
+from models.tree_node import TreeNode #no se envia error "no esta definido TreeNode"
 import numpy as np
 
 '''
@@ -23,7 +23,8 @@ def binary_search(arr: list, target: int, start=0, end=0):
     Implementa una función de búsqueda binaria para encontrar un elemento en una matriz ordenada (fila y columna) de enteros y retorne verdadero si la encuntra el elmento o falso si no lo encuentra
 '''
 def binary_search_matrix(matrix: list[list[int]], target: int):
-     vector_uni= np.concatenate(matrix)
+    #se utiliza la libreria numpy para concatenar
+     vector_uni= np.concatenate(matrix) 
      binary_search(vector_uni)
 
 '''
