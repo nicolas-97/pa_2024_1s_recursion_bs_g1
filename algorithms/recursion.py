@@ -33,6 +33,8 @@ def sum_of_numbers(n):
     Implementa una función recursiva para calcular a^n (a elevado a la potencia n).
 '''
 def power(a, n):
+    if n == 0:
+        return 1
     if n==1:
         return a
     else:
