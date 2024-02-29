@@ -10,13 +10,14 @@ def binary_search(arr: list, target: int, start=-100, end=-100):
 
     if start == -100 and end == -100:
         start = 0
-        end = len(arr) - 1
+        end = len(arr)
         
     mitad_arreglo = (start + end) // 2
     
     if mitad_arreglo == len(arr) or end < start:
         return -1
-
+    if start == 0 and end < 0:
+         return -1
         
     if arr[mitad_arreglo] == target:
         return mitad_arreglo
